@@ -1,10 +1,5 @@
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=RazanMuhammadIkhsan&theme=github-dark" />
-</p>
----
+<h2 align="center"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=7A1CAC&random=false&width=435&lines=%22Learning%2C+Leveling%2C+and+Leading.%22" alt="Typing SVG" />
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=RazanMuhammadIkhsan&label=Profile+Views&color=blue&style=plastic" alt="profile views" />
-</p>
+###
 
-<p align="center">✨ Thank you for visiting my profile! ✨</p>
+[![GitHub WidgetBox](https://github-widgetbox.vercel.app/api/profile?username=RazanMuhammadIkhsan&data=followers,repositories,stars,commits&theme=darkmode)](https://github.com/RazanMuhammadIkhsan)
