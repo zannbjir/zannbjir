@@ -3,3 +3,19 @@
 ###
 
 [![GitHub WidgetBox](https://github-widgetbox.vercel.app/api/profile?username=RazanMuhammadIkhsan&data=followers,repositories,stars,commits&theme=darkmode)](https://github.com/RazanMuhammadIkhsan)
+
+###
+
+[![GitHub WidgetBox](https://github-widgetbox.vercel.app/api/skills?languages=js,html,css,lua&includeNames=true&theme=darkmode)](https://github.com/Jurredr/github-widgetbox)
+
+###
+
+[![GitHub WidgetBox](https://github-widgetbox.vercel.app/api/skills?frameworks=react,next,tailwind,express&includeNames=true&theme=darkmode)](https://github.com/Jurredr/github-widgetbox)
+
+###
+
+[![GitHub WidgetBox](https://github-widgetbox.vercel.app/api/skills?tools=git,npm,yarn,firebase,mongodb,vercel,nodejs&includeNames=true&theme=darkmode)](https://github.com/Jurredr/github-widgetbox)
+
+###
+
+[![GitHub WidgetBox](https://github-widgetbox.vercel.app/api/skills?software=windows,vscode&includeNames=true&theme=darkmode)](https://github.com/Jurredr/github-widgetbox)
