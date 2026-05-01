@@ -15,7 +15,7 @@ Cuma anak SMK 17 tahun yang lagi nyari hobi, kebetulan nyasarnya di koding. Tapi
 ---
 
 ### 🛠️ Skill (Hasil Copas Semua)
-[![GitHub WidgetBox](https://github-widgetbox.vercel.app/api/skills?languages=js,html,css,kotlin,python&frameworks=react,next,tailwind&tools=git,npm,vercel&includeNames=true&theme=darkmode)](https://github.com/Jurredr/github-widgetbox)
+[![GitHub WidgetBox](https://github-widgetbox.vercel.app/api/skills?languages=js,html,css,kotlin,python&frameworks=react,next,vue,express,tailwind&tools=git,npm,nodejs,vercel&includeNames=true&theme=darkmode)](https://github.com/Jurredr/github-widgetbox)
 
 ---
 
