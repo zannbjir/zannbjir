@@ -15,12 +15,12 @@ Cuma anak SMK 17 tahun yang lagi nyari hobi, kebetulan nyasarnya di koding. Tapi
 ---
 
 ### 🛠️ Skill (Hasil Copas Semua)
-[![GitHub WidgetBox](https://github-widgetbox.vercel.app/api/skills?languages=js,html,css,lua,python&frameworks=react,next,tailwind&tools=git,npm,vercel&includeNames=true&theme=darkmode)](https://github.com/Jurredr/github-widgetbox)
+[![GitHub WidgetBox](https://github-widgetbox.vercel.app/api/skills?languages=js,html,css,kotlin,python&frameworks=react,next,tailwind&tools=git,npm,vercel&includeNames=true&theme=darkmode)](https://github.com/Jurredr/github-widgetbox)
 
 ---
 
 <p align="center">
-  <i>"Gak usah dibaca, gue juga bikinnya lagi males."</i>
+  <i>"Gak usah dibaca, gue juga bikinnya sambil scroll fesnuk 😹😹."</i>
 </p>
 
 <p align="center">
