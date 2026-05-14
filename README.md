@@ -19,6 +19,12 @@ Cuma anak SMK 17 tahun yang lagi nyari hobi, kebetulan nyasarnya di koding. Tapi
 
 ---
 
+### 📊 Statistik Coding Mingguan
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
+
+---
+
 <p align="center">
   <i>"Gak usah dibaca, gue juga bikinnya sambil scroll fesnuk 😹😹."</i>
 </p>
