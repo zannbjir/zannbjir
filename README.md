@@ -21,6 +21,17 @@ Cuma anak SMK 17 tahun yang lagi nyari hobi, kebetulan nyasarnya di koding. Tapi
 
 ### 📊 Statistik Coding Mingguan
 <!--START_SECTION:waka-->
+
+```txt
+From: 06 May 2026 - To: 13 May 2026
+
+JavaScript   3 hrs 58 mins         >>>>>>>>>>>>>>>>---------   64.01 %
+Vue          45 mins               >>>----------------------   12.33 %
+HTML         36 mins               >>-----------------------   09.93 %
+Kotlin       21 mins               >------------------------   05.69 %
+JSON         12 mins               >------------------------   03.25 %
+```
+
 <!--END_SECTION:waka-->
 
 ---
