@@ -1,0 +1,22 @@
+name: Waka Readme
+
+on:
+  workflow_dispatch: # Memungkinkan kamu menjalankan action ini secara manual dari tab Actions
+  schedule:
+    # Action ini akan berjalan otomatis setiap hari pada pukul 00:00 UTC
+    - cron: '0 0 * * *'
+
+jobs:
+  update-readme:
+    name: Update Readme with Metrics
+    runs-on: ubuntu-latest
+    steps:
+      - uses: athul/waka-readme@master
+        with:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          # Opsional: Ubah ke 'true' jika kamu ingin menampilkan waktu (misal: 10 hrs 30 mins)
+          SHOW_TIME: true
+          # Opsional: Ubah ke 'true' jika kamu ingin menyembunyikan detail text di bawah grafik
+          SHOW_TITLE: true 
+          # Opsional: Gaya blok grafik. Bisa pakai '░', '▒', '▓', '█' dll.
+          BLOCKS: ->
