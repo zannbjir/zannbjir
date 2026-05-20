@@ -15,7 +15,7 @@ jobs:
 
       - name: Generate Real GitHub Activity
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           USERNAME: zannbjir
         run: |
           DATE=$(date '+%Y-%m-%d')
@@ -26,32 +26,32 @@ jobs:
           echo "" >> $FILENAME
 
           echo "1. Commit Hari Ini:" >> $FILENAME
-          git log --since="24 hours ago" --pretty=format:"- %h %s (%an)" >> $FILENAME 2>/dev/null || echo "- Tidak ada commit" >> $FILENAME
+          git log --since="24 hours ago" --pretty=format:"- %h %s" >> $FILENAME 2>/dev/null || echo "- Tidak ada commit baru" >> $FILENAME
           echo "" >> $FILENAME
 
-          echo "2. Total Commits di Repo Ini: $(git rev-list --count HEAD)" >> $FILENAME
+          echo "2. Total Commits Repo Ini: $(git rev-list --count HEAD)" >> $FILENAME
           echo "" >> $FILENAME
 
-          echo "3. Recent Activity (via GitHub API):" >> $FILENAME
-          curl -s -H "Authorization: token $GITHUB_TOKEN" \
+          echo "3. Recent GitHub Activity:" >> $FILENAME
+          curl -s -H "Authorization: token $GH_TOKEN" \
                -H "Accept: application/vnd.github.v3+json" \
-               "https://api.github.com/users/$USERNAME/events?per_page=15" | \
+               "https://api.github.com/users/$USERNAME/events?per_page=20" | \
           jq -r '
             .[] | 
             if .type == "PushEvent" then
-              "- Push ke \(.repo.name): \(.payload.commits[0].message[:80])"
-            elif .type == "CreateEvent" then
-              "- Create \(.payload.ref_type) \(.payload.ref) di \(.repo.name)"
+              "- Push → \(.repo.name) | \(.payload.commits[0].message[:100])"
             elif .type == "WatchEvent" then
-              "- Starred \(.repo.name)"
-            elif .type == "ForkEvent" then
-              "- Forked \(.repo.name)"
+              "- Starred → \(.repo.name)"
             elif .type == "FollowEvent" then
-              "- Followed \(.payload.target.login)"
+              "- Followed → \(.payload.target.login)"
+            elif .type == "CreateEvent" then
+              "- Created \(.payload.ref_type) → \(.repo.name)"
+            elif .type == "ForkEvent" then
+              "- Forked → \(.repo.name)"
             else
-              "- \(.type) di \(.repo.name)"
+              "- \(.type) → \(.repo.name)"
             end
-          ' >> $FILENAME 2>/dev/null || echo "- API limit / error" >> $FILENAME
+          ' 2>/dev/null | head -n 15 >> $FILENAME || echo "- Tidak bisa ambil data API" >> $FILENAME
 
           echo "" >> $FILENAME
           echo "=== End of Log ===" >> $FILENAME
