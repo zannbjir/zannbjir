@@ -1,0 +1,65 @@
+name: Daily GitHub Activity Log
+
+on:
+  schedule:
+    - cron: '0 5 * * *'
+  workflow_dispatch:
+
+jobs:
+  activity-log:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate Real GitHub Activity
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: zannbjir
+        run: |
+          DATE=$(date '+%Y-%m-%d')
+          FILENAME="zannbjir-${DATE}.txt"
+          
+          echo "=== GitHub Activity - $DATE ===" > $FILENAME
+          echo "Generated at: $(date '+%Y-%m-%d %H:%M WIB')" >> $FILENAME
+          echo "" >> $FILENAME
+
+          echo "1. Commit Hari Ini:" >> $FILENAME
+          git log --since="24 hours ago" --pretty=format:"- %h %s (%an)" >> $FILENAME 2>/dev/null || echo "- Tidak ada commit" >> $FILENAME
+          echo "" >> $FILENAME
+
+          echo "2. Total Commits di Repo Ini: $(git rev-list --count HEAD)" >> $FILENAME
+          echo "" >> $FILENAME
+
+          echo "3. Recent Activity (via GitHub API):" >> $FILENAME
+          curl -s -H "Authorization: token $GITHUB_TOKEN" \
+               -H "Accept: application/vnd.github.v3+json" \
+               "https://api.github.com/users/$USERNAME/events?per_page=15" | \
+          jq -r '
+            .[] | 
+            if .type == "PushEvent" then
+              "- Push ke \(.repo.name): \(.payload.commits[0].message[:80])"
+            elif .type == "CreateEvent" then
+              "- Create \(.payload.ref_type) \(.payload.ref) di \(.repo.name)"
+            elif .type == "WatchEvent" then
+              "- Starred \(.repo.name)"
+            elif .type == "ForkEvent" then
+              "- Forked \(.repo.name)"
+            elif .type == "FollowEvent" then
+              "- Followed \(.payload.target.login)"
+            else
+              "- \(.type) di \(.repo.name)"
+            end
+          ' >> $FILENAME 2>/dev/null || echo "- API limit / error" >> $FILENAME
+
+          echo "" >> $FILENAME
+          echo "=== End of Log ===" >> $FILENAME
+
+      - name: Commit & Push
+        run: |
+          git config user.name "zannbjir"
+          git config user.email "zannbjir@users.noreply.github.com"
+          git add zannbjir-*.txt
+          git commit -m "📋 Daily activity log - $(date '+%Y-%m-%d')" || echo "No changes"
+          git push
