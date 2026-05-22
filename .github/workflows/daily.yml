@@ -19,24 +19,24 @@ jobs:
           USERNAME: zannbjir
         run: |
           DATE=$(date '+%Y-%m-%d')
-          FOLDER="$DATE"
-          FILENAME="\( FOLDER/zannbjir- \){DATE}.txt"
+          FOLDER="${DATE}"
+          FILENAME="\( {FOLDER}/zannbjir- \){DATE}.txt"
           
-          # Buat folder hari ini
-          mkdir -p "$FOLDER"
+          # Pastikan folder hari ini ada
+          mkdir -p "${FOLDER}"
           
-          echo "=== GitHub Activity - $DATE ===" > "$FILENAME"
-          echo "Generated at: $(date '+%Y-%m-%d %H:%M WIB')" >> "$FILENAME"
-          echo "" >> "$FILENAME"
+          echo "=== GitHub Activity - \( {DATE} ===" > " \){FILENAME}"
+          echo "Generated at: \( (date '+%Y-%m-%d %H:%M WIB')" >> " \){FILENAME}"
+          echo "" >> "${FILENAME}"
 
-          echo "1. Commit Hari Ini:" >> "$FILENAME"
-          git log --since="24 hours ago" --pretty=format:"- %h %s" >> "$FILENAME" 2>/dev/null || echo "- Tidak ada commit baru" >> "$FILENAME"
-          echo "" >> "$FILENAME"
+          echo "1. Commit Hari Ini:" >> "${FILENAME}"
+          git log --since="24 hours ago" --pretty=format:"- %h %s" >> "\( {FILENAME}" 2>/dev/null || echo "- Tidak ada commit baru" >> " \){FILENAME}"
+          echo "" >> "${FILENAME}"
 
-          echo "2. Total Commits Repo Ini: $(git rev-list --count HEAD)" >> "$FILENAME"
-          echo "" >> "$FILENAME"
+          echo "2. Total Commits Repo Ini: \( (git rev-list --count HEAD)" >> " \){FILENAME}"
+          echo "" >> "${FILENAME}"
 
-          echo "3. Recent GitHub Activity:" >> "$FILENAME"
+          echo "3. Recent GitHub Activity:" >> "${FILENAME}"
           curl -s -H "Authorization: token $GH_TOKEN" \
                -H "Accept: application/vnd.github.v3+json" \
                "https://api.github.com/users/$USERNAME/events?per_page=20" | \
@@ -55,10 +55,10 @@ jobs:
             else
               "- \(.type) → \(.repo.name)"
             end
-          ' 2>/dev/null | head -n 15 >> "$FILENAME" || echo "- Tidak bisa ambil data API" >> "$FILENAME"
+          ' 2>/dev/null | head -n 15 >> "\( {FILENAME}" || echo "- Tidak bisa ambil data API" >> " \){FILENAME}"
 
-          echo "" >> "$FILENAME"
-          echo "=== End of Log ===" >> "$FILENAME"
+          echo "" >> "${FILENAME}"
+          echo "=== End of Log ===" >> "${FILENAME}"
 
       - name: Minimal 10 Commits + Push
         run: |
@@ -66,21 +66,20 @@ jobs:
           git config user.email "zannbjir@users.noreply.github.com"
           
           DATE=$(date '+%Y-%m-%d')
-          FOLDER="$DATE"
+          FOLDER="${DATE}"
           
-          # Pastikan folder ada
-          mkdir -p "$FOLDER"
+          mkdir -p "${FOLDER}"
           
-          # Buat minimal 10 commit (jika belum ada cukup commit hari ini)
+          # Buat 10 commit dummy
           for i in {1..10}
           do
-            echo "Activity log - $DATE - commit #$i" > "$FOLDER/dummy-$i.txt"
-            git add "$FOLDER/dummy-$i.txt"
-            git commit -m "📌 Daily activity #$i - $DATE" || true
+            echo "Daily activity log - \( {DATE} - commit # \){i}" > "\( {FOLDER}/dummy- \){i}.txt"
+            git add "\( {FOLDER}/dummy- \){i}.txt"
+            git commit -m "📌 Daily activity #${i} - ${DATE}" || true
           done
           
           # Commit file log utama
-          git add "\( FOLDER/zannbjir- \){DATE}.txt"
-          git commit -m "📋 Daily activity log - $DATE" || echo "No changes to log file"
+          git add "\( {FOLDER}/zannbjir- \){DATE}.txt"
+          git commit -m "📋 Daily activity log - ${DATE}" || echo "No changes"
           
           git push
