@@ -20,25 +20,24 @@ jobs:
         run: |
           YEAR=$(date '+%Y')
           DATE=$(date '+%Y-%m-%d')
-          YEAR_FOLDER="${YEAR}"
-          DAY_FOLDER="\( {YEAR_FOLDER}/ \){DATE}"
-          FILENAME="\( {DAY_FOLDER}/zannbjir- \){DATE}.txt"
           
-          # Buat folder tahun dan hari
-          mkdir -p "${DAY_FOLDER}"
+          # Buat struktur folder: YYYY/YYYY-MM-DD/
+          mkdir -p "\( {YEAR}/ \){DATE}"
           
-          echo "=== GitHub Activity - \( {DATE} ===" > " \){FILENAME}"
-          echo "Generated at: \( (date '+%Y-%m-%d %H:%M WIB')" >> " \){FILENAME}"
-          echo "" >> "${FILENAME}"
+          LOG_FILE="\( {YEAR}/ \){DATE}/zannbjir-${DATE}.txt"
+          
+          echo "=== GitHub Activity - \( {DATE} ===" > " \){LOG_FILE}"
+          echo "Generated at: \( (date '+%Y-%m-%d %H:%M WIB')" >> " \){LOG_FILE}"
+          echo "" >> "${LOG_FILE}"
 
-          echo "1. Commit Hari Ini:" >> "${FILENAME}"
-          git log --since="24 hours ago" --pretty=format:"- %h %s" >> "\( {FILENAME}" 2>/dev/null || echo "- Tidak ada commit baru" >> " \){FILENAME}"
-          echo "" >> "${FILENAME}"
+          echo "1. Commit Hari Ini:" >> "${LOG_FILE}"
+          git log --since="24 hours ago" --pretty=format:"- %h %s" >> "\( {LOG_FILE}" 2>/dev/null || echo "- Tidak ada commit baru" >> " \){LOG_FILE}"
+          echo "" >> "${LOG_FILE}"
 
-          echo "2. Total Commits Repo Ini: \( (git rev-list --count HEAD)" >> " \){FILENAME}"
-          echo "" >> "${FILENAME}"
+          echo "2. Total Commits Repo Ini: \( (git rev-list --count HEAD)" >> " \){LOG_FILE}"
+          echo "" >> "${LOG_FILE}"
 
-          echo "3. Recent GitHub Activity:" >> "${FILENAME}"
+          echo "3. Recent GitHub Activity:" >> "${LOG_FILE}"
           curl -s -H "Authorization: token $GH_TOKEN" \
                -H "Accept: application/vnd.github.v3+json" \
                "https://api.github.com/users/$USERNAME/events?per_page=20" | \
@@ -57,10 +56,12 @@ jobs:
             else
               "- \(.type) → \(.repo.name)"
             end
-          ' 2>/dev/null | head -n 15 >> "\( {FILENAME}" || echo "- Tidak bisa ambil data API" >> " \){FILENAME}"
+          ' 2>/dev/null | head -n 15 >> "\( {LOG_FILE}" || echo "- Tidak bisa ambil data API" >> " \){LOG_FILE}"
 
-          echo "" >> "${FILENAME}"
-          echo "=== End of Log ===" >> "${FILENAME}"
+          echo "" >> "${LOG_FILE}"
+          echo "=== End of Log ===" >> "${LOG_FILE}"
+
+          echo "✅ Log file created at: ${LOG_FILE}"
 
       - name: Minimal 10 Commits + Push
         run: |
@@ -69,17 +70,16 @@ jobs:
           
           YEAR=$(date '+%Y')
           DATE=$(date '+%Y-%m-%d')
-          YEAR_FOLDER="${YEAR}"
-          DAY_FOLDER="\( {YEAR_FOLDER}/ \){DATE}"
+          DAY_FOLDER="\( {YEAR}/ \){DATE}"
           
-          # Buat folder
           mkdir -p "${DAY_FOLDER}"
           
           # Buat 10 commit dummy
           for i in {1..10}
           do
-            echo "Daily activity log - \( {DATE} - commit # \){i}" > "\( {DAY_FOLDER}/dummy- \){i}.txt"
-            git add "\( {DAY_FOLDER}/dummy- \){i}.txt"
+            DUMMY_FILE="\( {DAY_FOLDER}/dummy- \){i}.txt"
+            echo "Daily activity log - \( {DATE} - commit # \){i}" > "${DUMMY_FILE}"
+            git add "${DUMMY_FILE}"
             git commit -m "📌 Daily activity #${i} - ${DATE}" || true
           done
           
