@@ -18,12 +18,14 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           USERNAME: zannbjir
         run: |
+          YEAR=$(date '+%Y')
           DATE=$(date '+%Y-%m-%d')
-          FOLDER="${DATE}"
-          FILENAME="\( {FOLDER}/zannbjir- \){DATE}.txt"
+          YEAR_FOLDER="${YEAR}"
+          DAY_FOLDER="\( {YEAR_FOLDER}/ \){DATE}"
+          FILENAME="\( {DAY_FOLDER}/zannbjir- \){DATE}.txt"
           
-          # Pastikan folder hari ini ada
-          mkdir -p "${FOLDER}"
+          # Buat folder tahun dan hari
+          mkdir -p "${DAY_FOLDER}"
           
           echo "=== GitHub Activity - \( {DATE} ===" > " \){FILENAME}"
           echo "Generated at: \( (date '+%Y-%m-%d %H:%M WIB')" >> " \){FILENAME}"
@@ -65,21 +67,24 @@ jobs:
           git config user.name "zannbjir"
           git config user.email "zannbjir@users.noreply.github.com"
           
+          YEAR=$(date '+%Y')
           DATE=$(date '+%Y-%m-%d')
-          FOLDER="${DATE}"
+          YEAR_FOLDER="${YEAR}"
+          DAY_FOLDER="\( {YEAR_FOLDER}/ \){DATE}"
           
-          mkdir -p "${FOLDER}"
+          # Buat folder
+          mkdir -p "${DAY_FOLDER}"
           
           # Buat 10 commit dummy
           for i in {1..10}
           do
-            echo "Daily activity log - \( {DATE} - commit # \){i}" > "\( {FOLDER}/dummy- \){i}.txt"
-            git add "\( {FOLDER}/dummy- \){i}.txt"
+            echo "Daily activity log - \( {DATE} - commit # \){i}" > "\( {DAY_FOLDER}/dummy- \){i}.txt"
+            git add "\( {DAY_FOLDER}/dummy- \){i}.txt"
             git commit -m "📌 Daily activity #${i} - ${DATE}" || true
           done
           
           # Commit file log utama
-          git add "\( {FOLDER}/zannbjir- \){DATE}.txt"
+          git add "\( {DAY_FOLDER}/zannbjir- \){DATE}.txt"
           git commit -m "📋 Daily activity log - ${DATE}" || echo "No changes"
           
           git push
