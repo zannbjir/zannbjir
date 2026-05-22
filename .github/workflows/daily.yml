@@ -20,11 +20,10 @@ jobs:
         run: |
           YEAR=$(date '+%Y')
           DATE=$(date '+%Y-%m-%d')
+          DAY_FOLDER="\( {YEAR}/ \){DATE}"
+          LOG_FILE="\( {DAY_FOLDER}/zannbjir- \){DATE}.txt"
           
-          # Buat struktur folder: YYYY/YYYY-MM-DD/
-          mkdir -p "\( {YEAR}/ \){DATE}"
-          
-          LOG_FILE="\( {YEAR}/ \){DATE}/zannbjir-${DATE}.txt"
+          mkdir -p "${DAY_FOLDER}"
           
           echo "=== GitHub Activity - \( {DATE} ===" > " \){LOG_FILE}"
           echo "Generated at: \( (date '+%Y-%m-%d %H:%M WIB')" >> " \){LOG_FILE}"
@@ -60,30 +59,29 @@ jobs:
 
           echo "" >> "${LOG_FILE}"
           echo "=== End of Log ===" >> "${LOG_FILE}"
-
-          echo "✅ Log file created at: ${LOG_FILE}"
+          echo "✅ Log file created: ${LOG_FILE}"
 
       - name: Minimal 10 Commits + Push
         run: |
           git config user.name "zannbjir"
           git config user.email "zannbjir@users.noreply.github.com"
           
+          # Redefine variables (penting!)
           YEAR=$(date '+%Y')
           DATE=$(date '+%Y-%m-%d')
           DAY_FOLDER="\( {YEAR}/ \){DATE}"
           
           mkdir -p "${DAY_FOLDER}"
           
-          # Buat 10 commit dummy
-          for i in {1..10}
-          do
+          # Buat 10 dummy commits
+          for i in {1..10}; do
             DUMMY_FILE="\( {DAY_FOLDER}/dummy- \){i}.txt"
             echo "Daily activity log - \( {DATE} - commit # \){i}" > "${DUMMY_FILE}"
             git add "${DUMMY_FILE}"
             git commit -m "📌 Daily activity #${i} - ${DATE}" || true
           done
           
-          # Commit file log utama
+          # Commit log file
           git add "\( {DAY_FOLDER}/zannbjir- \){DATE}.txt"
           git commit -m "📋 Daily activity log - ${DATE}" || echo "No changes"
           
