@@ -20,20 +20,20 @@ jobs:
         run: |
           YEAR=$(date '+%Y')
           DATE=$(date '+%Y-%m-%d')
-          DAY_FOLDER="\( {YEAR}/ \){DATE}"
-          LOG_FILE="\( {DAY_FOLDER}/zannbjir- \){DATE}.txt"
+          DAY_FOLDER="${YEAR}/${DATE}"
+          LOG_FILE="${DAY_FOLDER}/zannbjir-${DATE}.txt"
           
           mkdir -p "${DAY_FOLDER}"
           
-          echo "=== GitHub Activity - \( {DATE} ===" > " \){LOG_FILE}"
-          echo "Generated at: \( (date '+%Y-%m-%d %H:%M WIB')" >> " \){LOG_FILE}"
+          echo "=== GitHub Activity - ${DATE} ===" > "${LOG_FILE}"
+          echo "Generated at: $(date '+%Y-%m-%d %H:%M WIB')" >> "${LOG_FILE}"
           echo "" >> "${LOG_FILE}"
 
           echo "1. Commit Hari Ini:" >> "${LOG_FILE}"
-          git log --since="24 hours ago" --pretty=format:"- %h %s" >> "\( {LOG_FILE}" 2>/dev/null || echo "- Tidak ada commit baru" >> " \){LOG_FILE}"
+          git log --since="24 hours ago" --pretty=format:"- %h %s" >> "${LOG_FILE}" 2>/dev/null || echo "- Tidak ada commit baru" >> "${LOG_FILE}"
           echo "" >> "${LOG_FILE}"
 
-          echo "2. Total Commits Repo Ini: \( (git rev-list --count HEAD)" >> " \){LOG_FILE}"
+          echo "2. Total Commits Repo Ini: $(git rev-list --count HEAD)" >> "${LOG_FILE}"
           echo "" >> "${LOG_FILE}"
 
           echo "3. Recent GitHub Activity:" >> "${LOG_FILE}"
@@ -55,7 +55,7 @@ jobs:
             else
               "- \(.type) → \(.repo.name)"
             end
-          ' 2>/dev/null | head -n 15 >> "\( {LOG_FILE}" || echo "- Tidak bisa ambil data API" >> " \){LOG_FILE}"
+          ' 2>/dev/null | head -n 15 >> "${LOG_FILE}" || echo "- Tidak bisa ambil data API" >> "${LOG_FILE}"
 
           echo "" >> "${LOG_FILE}"
           echo "=== End of Log ===" >> "${LOG_FILE}"
@@ -68,18 +68,18 @@ jobs:
           
           YEAR=$(date '+%Y')
           DATE=$(date '+%Y-%m-%d')
-          DAY_FOLDER="\( {YEAR}/ \){DATE}"
+          DAY_FOLDER="${YEAR}/${DATE}"
           
           mkdir -p "${DAY_FOLDER}"
           
           for i in {1..10}; do
-            DUMMY_FILE="\( {DAY_FOLDER}/dummy- \){i}.txt"
-            echo "Daily activity log - \( {DATE} - commit # \){i}" > "${DUMMY_FILE}"
+            DUMMY_FILE="${DAY_FOLDER}/dummy-${i}.txt"
+            echo "Daily activity log - ${DATE} - commit #${i}" > "${DUMMY_FILE}"
             git add "${DUMMY_FILE}"
             git commit -m "📌 Daily activity #${i} - ${DATE}" || true
           done
           
-          git add "\( {DAY_FOLDER}/zannbjir- \){DATE}.txt"
+          git add "${DAY_FOLDER}/zannbjir-${DATE}.txt"
           git commit -m "📋 Daily activity log - ${DATE}" || echo "No changes"
           
           git push
