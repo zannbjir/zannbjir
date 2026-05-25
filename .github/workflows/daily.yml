@@ -61,7 +61,7 @@ jobs:
           echo "=== End of Log ===" >> "${LOG_FILE}"
           echo "✅ Log file created at: ${LOG_FILE}"
 
-      - name: Minimal 10 Commits + Push
+      - name: 30 Commits + Auto Cleanup
         run: |
           git config user.name "zannbjir"
           git config user.email "zannbjir@users.noreply.github.com"
@@ -72,13 +72,20 @@ jobs:
           
           mkdir -p "${DAY_FOLDER}"
           
-          for i in {1..10}; do
+          # 1. Bikin 30 file dummy dan commit satu-satu
+          for i in {1..30}; do
             DUMMY_FILE="${DAY_FOLDER}/dummy-${i}.txt"
             echo "Daily activity log - ${DATE} - commit #${i}" > "${DUMMY_FILE}"
             git add "${DUMMY_FILE}"
             git commit -m "📌 Daily activity #${i} - ${DATE}" || true
           done
           
+          # 2. Hapus semua file dummy biar repo tetap bersih
+          rm "${DAY_FOLDER}"/dummy-*.txt
+          git add -u
+          git commit -m "🧹 Clean up 30 dummy files - ${DATE}" || true
+          
+          # 3. Commit file log utama
           git add "${DAY_FOLDER}/zannbjir-${DATE}.txt"
           git commit -m "📋 Daily activity log - ${DATE}" || echo "No changes"
           
