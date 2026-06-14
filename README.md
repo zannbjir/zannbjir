@@ -23,7 +23,7 @@ Cuma anak SMK 17 tahun yang lagi nyari hobi, kebetulan nyasarnya di koding. Tapi
 <!--START_SECTION:waka-->
 
 ```txt
-From: 05 June 2026 - To: 12 June 2026
+From: 06 June 2026 - To: 13 June 2026
 
 Kotlin       4 hrs 3 mins          >>>>>>>>>>>>-------------   48.41 %
 XML          3 hrs 38 mins         >>>>>>>>>>>--------------   43.50 %
