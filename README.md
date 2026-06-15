@@ -23,13 +23,13 @@ Cuma anak SMK 17 tahun yang lagi nyari hobi, kebetulan nyasarnya di koding. Tapi
 <!--START_SECTION:waka-->
 
 ```txt
-From: 06 June 2026 - To: 13 June 2026
+From: 07 June 2026 - To: 14 June 2026
 
-Kotlin       4 hrs 3 mins          >>>>>>>>>>>>-------------   48.41 %
-XML          3 hrs 38 mins         >>>>>>>>>>>--------------   43.50 %
-Groovy       13 mins               >------------------------   02.63 %
-HTML         10 mins               >------------------------   02.07 %
-JavaScript   9 mins                -------------------------   01.89 %
+Kotlin       1 hr 50 mins          >>>>>>>>>>>>>>-----------   57.10 %
+XML          1 hr 3 mins           >>>>>>>>-----------------   32.70 %
+HTML         10 mins               >------------------------   05.41 %
+Other        3 mins                >------------------------   02.03 %
+Bash         2 mins                -------------------------   01.47 %
 ```
 
 <!--END_SECTION:waka-->
