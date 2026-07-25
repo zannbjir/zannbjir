@@ -23,7 +23,7 @@ Cuma anak SMK 17 tahun yang lagi nyari hobi, kebetulan nyasarnya di koding. Tapi
 <!--START_SECTION:waka-->
 
 ```txt
-From: 16 July 2026 - To: 23 July 2026
+From: 17 July 2026 - To: 24 July 2026
 
 JavaScript   1 hr 52 mins          >>>>>>>>>>>>-------------   48.66 %
 HTML         37 mins               >>>>---------------------   16.32 %
