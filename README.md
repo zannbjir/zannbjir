@@ -29,13 +29,9 @@ const info = [
 <!--START_SECTION:waka-->
 
 ```txt
-From: 22 August 2026 - To: 29 August 2026
+From: 23 August 2026 - To: 30 August 2026
 
-HTML         19 mins               >>>>>>>>>>---------------   41.02 %
-Python       14 mins               >>>>>>>>-----------------   31.74 %
-TOML         6 mins                >>>>---------------------   14.14 %
-JSON         4 mins                >>-----------------------   08.86 %
-Text         1 min                 >------------------------   03.83 %
+JavaScript   7 mins                >>>>>>>>>>>>>>>>>>>>>>>>>   100.00 %
 ```
 
 <!--END_SECTION:waka-->
