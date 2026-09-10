@@ -29,13 +29,13 @@ const info = [
 <!--START_SECTION:waka-->
 
 ```txt
-From: 01 September 2026 - To: 08 September 2026
+From: 02 September 2026 - To: 09 September 2026
 
-TypeScript   6 hrs 11 mins         >>>>>>>>>>>>>>>>>>>>-----   80.99 %
-CSS          25 mins               >------------------------   05.67 %
-Other        17 mins               >------------------------   03.85 %
-Bash         13 mins               >------------------------   02.99 %
-Markdown     12 mins               >------------------------   02.74 %
+TypeScript   6 hrs 11 mins         >>>>>>>>>>>>>>>>>>>>>----   83.27 %
+CSS          25 mins               >------------------------   05.83 %
+Other        17 mins               >------------------------   03.96 %
+Bash         13 mins               >------------------------   03.07 %
+JSON         9 mins                >------------------------   02.22 %
 ```
 
 <!--END_SECTION:waka-->
