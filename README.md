@@ -29,13 +29,13 @@ const info = [
 <!--START_SECTION:waka-->
 
 ```txt
-From: 17 September 2026 - To: 24 September 2026
+From: 18 September 2026 - To: 25 September 2026
 
-Kotlin   1 hr 35 mins          >>>>>>>>-----------------   30.94 %
-Python   1 hr 25 mins          >>>>>>>------------------   27.55 %
-XML      55 mins               >>>>---------------------   17.75 %
-Groovy   39 mins               >>>----------------------   12.85 %
-Other    19 mins               >>-----------------------   06.39 %
+Python   1 hr 17 mins          >>>>>>>>>----------------   35.62 %
+Kotlin   50 mins               >>>>>>-------------------   23.12 %
+XML      43 mins               >>>>>--------------------   20.00 %
+Groovy   21 mins               >>-----------------------   09.91 %
+Other    16 mins               >>-----------------------   07.53 %
 ```
 
 <!--END_SECTION:waka-->
