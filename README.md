@@ -29,13 +29,13 @@ const info = [
 <!--START_SECTION:waka-->
 
 ```txt
-From: 21 September 2026 - To: 28 September 2026
+From: 22 September 2026 - To: 29 September 2026
 
-Python       50 mins               >>>>>>-------------------   25.48 %
-XML          49 mins               >>>>>>-------------------   25.36 %
-JavaScript   42 mins               >>>>>--------------------   21.50 %
-CSS          19 mins               >>-----------------------   09.96 %
-HTML         16 mins               >>-----------------------   08.22 %
+Python       50 mins               >>>>>>>------------------   26.47 %
+XML          43 mins               >>>>>>-------------------   22.97 %
+JavaScript   42 mins               >>>>>>-------------------   22.34 %
+CSS          19 mins               >>>----------------------   10.35 %
+HTML         16 mins               >>-----------------------   08.54 %
 ```
 
 <!--END_SECTION:waka-->
