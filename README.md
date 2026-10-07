@@ -29,7 +29,7 @@ const info = [
 <!--START_SECTION:waka-->
 
 ```txt
-From: 28 September 2026 - To: 05 October 2026
+From: 29 September 2026 - To: 06 October 2026
 
 Kotlin            20 mins               >>>>>>>>>----------------   35.84 %
 Text              15 mins               >>>>>>>------------------   27.25 %
