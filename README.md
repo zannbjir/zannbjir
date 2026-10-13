@@ -29,11 +29,13 @@ const info = [
 <!--START_SECTION:waka-->
 
 ```txt
-From: 04 October 2026 - To: 11 October 2026
+From: 05 October 2026 - To: 12 October 2026
 
-Kotlin   1 hr 23 mins          >>>>>>>>>>>>>>>>>>-------   70.72 %
-TOML     22 mins               >>>>>--------------------   19.09 %
-Other    12 mins               >>>----------------------   10.19 %
+Kotlin   1 hr 17 mins          >>>>>>>>>>>>>>>----------   60.93 %
+TOML     19 mins               >>>>---------------------   15.30 %
+Other    13 mins               >>>----------------------   10.62 %
+XML      12 mins               >>>----------------------   10.10 %
+Groovy   3 mins                >------------------------   03.05 %
 ```
 
 <!--END_SECTION:waka-->
