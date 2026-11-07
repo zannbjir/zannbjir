@@ -1,42 +1,15 @@
-<h2 align="center">👋 Razan di sini.</h2>
+<div align="center">
 
-```js
-const me = {
-    age: 17,
-    status: "kurang aktif",
-    hobby: "ngoding kalau lagi gabut",
-    personality: "pemalu, malu-malu kucing",
-    github: "buat gabut doang"
-};
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg"><img src="assets/hero-light.svg" width="100%" alt="Sloth Zann"></picture>
 
-### 📝 Sedikit Tentang Gue
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/social-l-dark.svg"><img src="assets/social-l-light.svg" width="31.054%" alt=""></picture><a href="https://www.instagram.com/razanaja.cuy/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/social-1-dark.svg"><img src="assets/social-1-light.svg" width="18.836%" alt="instagram"></picture></a><a href="https://wa.me/6289671842736"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/social-2-dark.svg"><img src="assets/social-2-light.svg" width="19.054%" alt="whatsapp"></picture></a><picture><source media="(prefers-color-scheme: dark)" srcset="assets/social-r-dark.svg"><img src="assets/social-r-light.svg" width="31.054%" alt=""></picture>
 
-```js
-const info = [
-    "Gue pake GitHub cuma buat gabut aja.",
-    "Ngoding kalau lagi ada mood.",
-    "Kalau gak ada mood ya ngilang.",
-    "Kurang aktif dan agak pemalu.",
-    "Malu-malu kucing kalau kenal orang baru.",
-    "Kadang bikin project, kadang cuma nyoba-nyoba.",
-    "Kalau error kebanyakan, ya tinggal mabar Epep."
-];
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg"><img src="assets/stats-light.svg" width="100%" alt="GitHub activity"></picture>
 
-### 📊 Coding Stats
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/streak-dark.svg"><img src="assets/streak-light.svg" width="100%" alt="Streak"></picture>
 
-<!--START_SECTION:waka-->
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/wave-dark.svg"><img src="assets/wave-light.svg" width="100%" alt=""></picture>
 
-```txt
-From: 24 October 2026 - To: 31 October 2026
+<a href="https://metawka.github.io/expressive-profile/?from=zannbjir"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/credit-dark.svg"><img src="assets/credit-light.svg" width="auto" alt="Made with Expressive Profile"></picture></a>
 
-JavaScript   9 mins                >>>>>>>>>>>>>>>>>>>>>>>>>   100.00 %
-```
-
-<!--END_SECTION:waka-->
-
-```js
-// intinya...
-console.log("Gue cuma anak gabut yang nyoba ngoding 😹");
-```
+</div>
