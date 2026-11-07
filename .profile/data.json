@@ -1,0 +1,391 @@
+{
+ "key": "cb81ccad",
+ "stars": 1,
+ "contributions": 5461,
+ "repos": 24,
+ "followers": 10,
+ "languages": [
+  [
+   "EJS",
+   530299
+  ],
+  [
+   "JavaScript",
+   208477
+  ],
+  [
+   "HTML",
+   28916
+  ],
+  [
+   "CSS",
+   25622
+  ],
+  [
+   "Python",
+   3080
+  ]
+ ],
+ "days": [
+  [
+   {
+    "c": 32,
+    "day": 18,
+    "today": false
+   },
+   {
+    "c": 32,
+    "day": 19,
+    "today": false
+   },
+   {
+    "c": 32,
+    "day": 20,
+    "today": false
+   },
+   {
+    "c": 32,
+    "day": 21,
+    "today": false
+   },
+   {
+    "c": 33,
+    "day": 22,
+    "today": false
+   },
+   {
+    "c": 32,
+    "day": 23,
+    "today": false
+   },
+   {
+    "c": 32,
+    "day": 24,
+    "today": false
+   }
+  ],
+  [
+   {
+    "c": 32,
+    "day": 25,
+    "today": false
+   },
+   {
+    "c": 32,
+    "day": 26,
+    "today": false
+   },
+   {
+    "c": 32,
+    "day": 27,
+    "today": false
+   },
+   {
+    "c": 32,
+    "day": 28,
+    "today": false
+   },
+   {
+    "c": 32,
+    "day": 29,
+    "today": false
+   },
+   {
+    "c": 32,
+    "day": 30,
+    "today": false
+   },
+   {
+    "c": 32,
+    "day": 31,
+    "today": false
+   }
+  ],
+  [
+   {
+    "c": 32,
+    "day": 1,
+    "today": false
+   },
+   {
+    "c": 32,
+    "day": 2,
+    "today": false
+   },
+   {
+    "c": 32,
+    "day": 3,
+    "today": false
+   },
+   {
+    "c": 32,
+    "day": 4,
+    "today": false
+   },
+   {
+    "c": 32,
+    "day": 5,
+    "today": false
+   },
+   {
+    "c": 32,
+    "day": 6,
+    "today": false
+   },
+   {
+    "c": 33,
+    "day": 7,
+    "today": true
+   }
+  ]
+ ],
+ "streak": {
+  "current": 151,
+  "longest": 151
+ },
+ "pins": [
+  {
+   "name": "yomito",
+   "url": "https://github.com/zannbjir/yomito",
+   "text": "Manga reader for Android",
+   "fork": true,
+   "stars": 10,
+   "language": "Kotlin",
+   "topics": []
+  },
+  {
+   "name": "yomito-parsers",
+   "url": "https://github.com/zannbjir/yomito-parsers",
+   "text": "Manga parsers library for Kotlin/JVM and Android",
+   "fork": true,
+   "stars": 1,
+   "language": "Kotlin",
+   "topics": []
+  }
+ ],
+ "all": [
+  {
+   "name": "yomito",
+   "url": "https://github.com/zannbjir/yomito",
+   "text": "Manga reader for Android",
+   "fork": true,
+   "stars": 10,
+   "language": "Kotlin",
+   "topics": []
+  },
+  {
+   "name": "yomito-parsers",
+   "url": "https://github.com/zannbjir/yomito-parsers",
+   "text": "Manga parsers library for Kotlin/JVM and Android",
+   "fork": true,
+   "stars": 1,
+   "language": "Kotlin",
+   "topics": []
+  },
+  {
+   "name": "Varnime",
+   "url": "https://github.com/zannbjir/Varnime",
+   "text": "Varnime adalah situs anime gratis tanpa iklan untuk menonton anime gratis",
+   "fork": false,
+   "stars": 1,
+   "language": "JavaScript",
+   "topics": [
+    "anime",
+    "streaming-anime",
+    "web-anime"
+   ]
+  },
+  {
+   "name": "Cyro",
+   "url": "https://github.com/zannbjir/Cyro",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": null,
+   "topics": []
+  },
+  {
+   "name": "ChiiMD",
+   "url": "https://github.com/zannbjir/ChiiMD",
+   "text": "",
+   "fork": true,
+   "stars": 0,
+   "language": "JavaScript",
+   "topics": []
+  },
+  {
+   "name": "extensions-source",
+   "url": "https://github.com/zannbjir/extensions-source",
+   "text": "Source code of extensions in https://github.com/keiyoushi/extensions",
+   "fork": true,
+   "stars": 0,
+   "language": "Kotlin",
+   "topics": []
+  },
+  {
+   "name": "Nefusoft-ANIME-V1.1",
+   "url": "https://github.com/zannbjir/Nefusoft-ANIME-V1.1",
+   "text": "Anime site with vite & react",
+   "fork": true,
+   "stars": 0,
+   "language": "JavaScript",
+   "topics": []
+  },
+  {
+   "name": "kicau-mania",
+   "url": "https://github.com/zannbjir/kicau-mania",
+   "text": "Au ahh",
+   "fork": false,
+   "stars": 0,
+   "language": "Python",
+   "topics": []
+  },
+  {
+   "name": "baileys",
+   "url": "https://github.com/zannbjir/baileys",
+   "text": "",
+   "fork": true,
+   "stars": 0,
+   "language": "JavaScript",
+   "topics": []
+  },
+  {
+   "name": "Pukimon",
+   "url": "https://github.com/zannbjir/Pukimon",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "EJS",
+   "topics": []
+  },
+  {
+   "name": "hmm",
+   "url": "https://github.com/zannbjir/hmm",
+   "text": "",
+   "fork": true,
+   "stars": 0,
+   "language": "JavaScript",
+   "topics": []
+  },
+  {
+   "name": "yomito-malam",
+   "url": "https://github.com/zannbjir/yomito-malam",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": null,
+   "topics": []
+  },
+  {
+   "name": "build-apps",
+   "url": "https://github.com/zannbjir/build-apps",
+   "text": "Automation for Doki, powered by GitHub",
+   "fork": true,
+   "stars": 0,
+   "language": null,
+   "topics": []
+  },
+  {
+   "name": "bratlil",
+   "url": "https://github.com/zannbjir/bratlil",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "HTML",
+   "topics": []
+  },
+  {
+   "name": "foo.ng",
+   "url": "https://github.com/zannbjir/foo.ng",
+   "text": "Free subdomains for everyone.",
+   "fork": true,
+   "stars": 0,
+   "language": null,
+   "topics": []
+  },
+  {
+   "name": "bjir",
+   "url": "https://github.com/zannbjir/bjir",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "JavaScript",
+   "topics": []
+  },
+  {
+   "name": "is-a-software",
+   "url": "https://github.com/zannbjir/is-a-software",
+   "text": "Free .is-a.software subdomain for developers",
+   "fork": true,
+   "stars": 0,
+   "language": "TypeScript",
+   "topics": []
+  },
+  {
+   "name": "porto-v1",
+   "url": "https://github.com/zannbjir/porto-v1",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "EJS",
+   "topics": []
+  },
+  {
+   "name": "Telebot",
+   "url": "https://github.com/zannbjir/Telebot",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "JavaScript",
+   "topics": []
+  },
+  {
+   "name": "Happy-Api",
+   "url": "https://github.com/zannbjir/Happy-Api",
+   "text": "Rest Api Simpel",
+   "fork": false,
+   "stars": 0,
+   "language": "JavaScript",
+   "topics": []
+  },
+  {
+   "name": "database-1",
+   "url": "https://github.com/zannbjir/database-1",
+   "text": "",
+   "fork": true,
+   "stars": 0,
+   "language": "JavaScript",
+   "topics": []
+  },
+  {
+   "name": "database",
+   "url": "https://github.com/zannbjir/database",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": null,
+   "topics": []
+  },
+  {
+   "name": "register",
+   "url": "https://github.com/zannbjir/register",
+   "text": "Grab your own sweet-looking '.is-a.dev' subdomain.",
+   "fork": true,
+   "stars": 0,
+   "language": "JavaScript",
+   "topics": []
+  },
+  {
+   "name": "zannbjir",
+   "url": "https://github.com/zannbjir/zannbjir",
+   "text": "Config files for my GitHub profile.",
+   "fork": false,
+   "stars": 0,
+   "language": null,
+   "topics": [
+    "config",
+    "github-config"
+   ]
+  }
+ ]
+}
