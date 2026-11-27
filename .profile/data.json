@@ -1,5 +1,5 @@
 {
- "key": "de7790ce",
+ "key": "6375c0ad",
  "stars": 1,
  "contributions": 6081,
  "repos": 27,
@@ -125,9 +125,13 @@
    {
     "c": 32,
     "day": 26,
+    "today": false
+   },
+   {
+    "c": 0,
+    "day": 27,
     "today": true
    },
-   null,
    null
   ]
  ],
